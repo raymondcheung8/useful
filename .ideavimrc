@@ -1,0 +1,75 @@
+set scrolloff=5
+set showmode
+set showcmd
+set visualbell
+" Note - this is bugged, this breaks overwriting visual blocks with p
+"set clipboard+=unnamed
+
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+let mapleader = " "
+
+set surround
+set highlightedyank
+set nerdtree
+set which-key
+set commentary
+
+" For which-key
+set notimeout
+set timeoutlen=5000
+
+" Idea settings
+set ideajoin
+set idearefactormode=keep
+
+" Tab navigation
+nnoremap <A-n> :tabnext<CR>
+nnoremap <A-p> :tabprev<CR>
+map <A-m> <action>(HideAllWindows)
+
+" Easy visual indentation
+vnoremap < <gv
+vnoremap > >gv
+
+" File navigation
+map <leader>sf <action>(GotoFile)
+map <leader>s. <action>(RecentFiles)
+map <leader>sg <action>(FindInPath)
+" Note - this is bugged, Switcher just becomes RecentFiles
+map <leader><leader> <Action>(Switcher)
+map <leader>sl <action>(RecentLocations)
+map <leader>sc <action>(GotoClass)
+nnoremap <leader>sn :e ~/.ideavimrc<CR>
+map gi <action>(GotoImplementation)
+map gI <action>(GotoSuperMethod)
+
+" Esc runs :noh
+nnoremap <esc> :noh<CR><esc>
+nnoremap <C-c> :noh<CR><esc>
+nnoremap <C-[> :noh<CR><esc>
+
+" Running and debugging
+map <leader>de <Action>(Run)
+map <leader>da <Action>(Debug)
+map <leader>dt <Action>(Stop)
+map <leader>db <Action>(ToggleLineBreakpoint)
+" Note - the next two keymaps are for traversing diagnostics, not errors
+map ]d <Action>(GotoNextError)
+map [d <Action>(GotoPreviousError)
+
+" General
+map <leader>cr <Action>(RenameElement)
+map <leader>cR <Action>(RenameFile)
+map <leader>cd <Action>(ShowErrorDescription)
+map <leader>cf <Action>(ReformatCode)
+
+" Idea keymaps
+map <leader>z <Action>(ToggleDistractionFreeMode)
+map <leader>x <Action>(SelectInProjectView)
+map <leader>a <Action>(Annotate)
+map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+map <leader>q <action>(CloseContent)
