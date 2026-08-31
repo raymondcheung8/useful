@@ -61,6 +61,7 @@
     (change commit message, then save and quit, for each commit you have chosen)
     (force push)
 
+---
 
 ## Useful Docker commands
 
@@ -79,6 +80,7 @@
 ### Update docker images:
     docker-compose pull
 
+---
 
 ## Useful Hbase shell commands
 
@@ -103,6 +105,7 @@
 ### Remove all entries from table:
     truncate 'INSERT_TABLE_NAME'
 
+---
 
 ## Useful sbt commands
 
@@ -113,12 +116,14 @@
     testOnly TESTNAME
     show dynver
 
+---
 
 ## Useful Postman/Newman commands
 
     newman run POSTMAN_COLLECTION --env-var ENV_VAR=VAR_VALUE --env-var --verbose
     newman run POSTMAN_COLLECTION --env-var ENV_VAR=VAR_VALUE --folder "REQUEST_NAME"
 
+---
 
 ## Useful unzip/extract commands (<https://linuxize.com/post/how-to-unzip-gz-file/>)
 
@@ -127,6 +132,7 @@
     tar -xvf FILE.tgz
     unzip FILE.zip
 
+---
 
 ## Useful Bash commands
 
