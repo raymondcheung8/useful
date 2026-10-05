@@ -10,7 +10,9 @@
     git init -b master
     git add -A
     git commit -a
-    git rebase <commitToBeReplaced> --onto origin/master
+    git rebase <commitToBeReplaced> --onto <commitToReplace>
+    git reflog
+    git fetch origin main:main
 ### For recursively updating new commits to submodules:
     git submodule update --init --recursive
 ### For adding a git submodule:
@@ -25,6 +27,11 @@
     git stash drop
     git stash drop stash@{i} OR git stash drop i
     git stash list
+### Git config:
+    git config --global user.name "Your Name"
+    git config --global user.email "name@domain.example"
+    git config --global --unset <config.setting>
+    git config --list
 ### For removing the previous commit:
     git reset HEAD~1
 ### Removing the previous merge:
