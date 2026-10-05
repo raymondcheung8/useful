@@ -73,3 +73,11 @@ map <leader>x <Action>(SelectInProjectView)
 map <leader>a <Action>(Annotate)
 map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
 map <leader>q <action>(CloseContent)
+
+" Navigate git changes
+map ]c <Action>(VcsShowNextChangeMarker)
+map [c <Action>(VcsShowPrevChangeMarker)
+
+" Navigate back and forward (needed for bug in remote development that breaks the default Ctrl + O and Ctrl + I)
+map <C-o> <Action>(Back)
+map <C-i> <Action>(Forward)
